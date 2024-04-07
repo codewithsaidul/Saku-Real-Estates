@@ -50,14 +50,14 @@ const Banner = () => {
               src={BannerImg1}
               alt=""
             />
-            <div className="hero-overlay bg-opacity-60 rounded-lg"></div>
+            <div className="hero-overlay bg-opacity-70 rounded-lg"></div>
           </figure>
 
-          <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10 md:text-left">
+          <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10">
             <p className="text-lg font-semibold text-white mb-3">
               Real State Company
             </p>
-            <h1 className="text-3xl md:text-6xl font-extrabold text-white mb-5 md:w-[600px]">
+            <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
               Creative Style For Your Next Home
             </h1>
 
@@ -77,14 +77,14 @@ const Banner = () => {
               src={BannerImg2}
               alt=""
             />
-            <div className="hero-overlay bg-opacity-60 rounded-lg"></div>
+            <div className="hero-overlay bg-opacity-70 rounded-lg"></div>
           </figure>
 
-          <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10 md:text-left">
+          <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10">
             <p className="text-lg font-semibold text-white mb-3">
               Real State Company
             </p>
-            <h1 className="text-3xl md:text-6xl font-extrabold text-white mb-5 md:w-[600px]">
+            <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
               SakuBliss Estates: Your Gateway to Serenity
             </h1>
 
@@ -104,14 +104,14 @@ const Banner = () => {
               src={BannerImg3}
               alt=""
             />
-            <div className="hero-overlay bg-opacity-60 rounded-lg"></div>
+            <div className="hero-overlay bg-opacity-80 rounded-lg"></div>
           </figure>
 
-          <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10 md:text-left">
+          <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10">
             <p className="text-lg font-semibold text-white mb-3">
               Real State Company
             </p>
-            <h1 className="text-3xl md:text-6xl font-extrabold text-white mb-5 md:w-[600px]">
+            <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
               Discover Tranquility at SakuBliss Estates
             </h1>
 
@@ -131,14 +131,14 @@ const Banner = () => {
               src={BannerImg4}
               alt=""
             />
-            <div className="hero-overlay bg-opacity-60 rounded-lg"></div>
+            <div className="hero-overlay bg-opacity-80 rounded-lg"></div>
           </figure>
 
-          <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10 md:text-left">
+          <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10">
             <p className="text-lg font-semibold text-white mb-3">
               Real State Company
             </p>
-            <h1 className="text-3xl md:text-6xl font-extrabold text-white mb-5 md:w-[600px]">
+            <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
               SakuBliss Estates: Where Luxury Meets Serenity
             </h1>
 
@@ -158,14 +158,14 @@ const Banner = () => {
               src={BannerImg5}
               alt=""
             />
-            <div className="hero-overlay bg-opacity-60 rounded-lg"></div>
+            <div className="hero-overlay bg-opacity-80 rounded-lg"></div>
           </figure>
 
-          <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10 md:text-left">
+          <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10">
             <p className="text-lg font-semibold text-white mb-3">
               Real State Company
             </p>
-            <h1 className="text-3xl md:text-6xl font-extrabold text-white mb-5 md:w-[600px]">
+            <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
               Experience Blissful Living at SakuBliss Estates
             </h1>
 
