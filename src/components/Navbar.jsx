@@ -10,7 +10,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive
                 ? "border border-[#1D5D9B] bg-white hover:bg-[#1D5D9B] hover:text-white duration-1000 text-black font-semibold text-lg"
-                : "bg-transparent font-semibold text-lg text-gray-400 hover:bg-white"
+                : "bg-transparent font-semibold text-lg text-gray-400 hover:bg-white hover:text-[#1D5D9B]"
             }
           >
             Home
@@ -22,7 +22,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive
                 ? "border border-[#1D5D9B] bg-white hover:bg-[#1D5D9B] hover:text-white duration-1000 text-black font-semibold text-lg"
-                : "bg-transparent font-semibold text-lg text-gray-400 hover:bg-white"
+                : "bg-transparent font-semibold text-lg text-gray-400 hover:bg-white hover:text-[#1D5D9B]"
             }
           >
             Update Profile
@@ -34,7 +34,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive
                 ? "border border-[#1D5D9B] bg-white hover:bg-[#1D5D9B] hover:text-white duration-1000 text-black font-semibold text-lg"
-                : "bg-transparent font-semibold text-lg text-gray-400 hover:bg-white"
+                : "bg-transparent font-semibold text-lg text-gray-400 hover:bg-white hover:text-[#1D5D9B]"
             }
           >
             Contact
