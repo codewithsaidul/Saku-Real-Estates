@@ -3,7 +3,7 @@ import Banner from "../components/Banner";
 
 const Home = () => {
   return (
-    <div className="w-full max-w-[1170px] mx-auto">
+    <div id="#home" className="w-full max-w-[1170px] mx-auto">
       <div className="mt-10">
         <Banner />
       </div>
