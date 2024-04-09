@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import UpdateProfile from "../pages/UpdateProfile";
 import NotFoun from "../components/NotFoun";
 import ResidentialDetails from "../pages/ResidentialDetails";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         {
             path: '/login',
             element: <Login/>
+        },
+        {
+            path: '/register',
+            element: <Register/>
         },
         {
             path: '/contact',
