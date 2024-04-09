@@ -1,5 +1,6 @@
 import About from "../components/About";
 import Banner from "../components/Banner";
+import Residentials from "../components/Residentials";
 // import BannerImg from '../assets/building.jpg'
 
 const Home = () => {
@@ -10,7 +11,11 @@ const Home = () => {
       </div>
 
       <div className="mt-20 mb-20">
-        <About/>
+        <About />
+
+        <div className="mt-20">
+          <Residentials />
+        </div>
       </div>
     </div>
   );
