@@ -1,8 +1,32 @@
 import { FaEnvelopeSquare, FaGithub, FaGoogle, FaLock } from 'react-icons/fa';
 import BG from '../assets/bg-01.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
+import { useForm } from 'react-hook-form';
+import { useContext } from 'react';
+import { AuthContext } from '../provider/AuthProvider';
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const {register, handleSubmit, resetField} = useForm();
+  const {loginUser} = useContext(AuthContext);
+  const naviGate = useNavigate();
+
+  const onSubmit = data => {
+    const {Email, Password} = data;
+    // console.log(Email, Password)
+      resetField("Email");
+      resetField("Password");
+
+      
+    loginUser(Email, Password)
+      .then(() => {
+        toast.success("Successfully toasted!")
+        naviGate('/')
+      })
+      .catch((error) => console.error(error.message));
+  }
+
+
   return (
     <div>
       <div
@@ -10,7 +34,10 @@ const Login = () => {
         style={{ backgroundImage: `url(${BG})` }}
       >
         <div className="shadow-custom my-10 rounded-xl">
-          <form className="py-10 px-5 md:p-20 border-b mb-10">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="py-10 px-5 md:p-20 border-b mb-10"
+          >
             <h2 className="text-3xl font-bold text-white mb-7">
               Login In Your Account
             </h2>
@@ -24,6 +51,7 @@ const Login = () => {
                 <FaEnvelopeSquare size={20} className="text-white" />
                 <input
                   type="email"
+                  {...register("Email")}
                   placeholder="Type Your Email"
                   className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
                   required
@@ -38,6 +66,7 @@ const Login = () => {
                 <FaLock size={20} className="text-white" />
                 <input
                   type="password"
+                  {...register("Password")}
                   placeholder="Type Your Password"
                   className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
                   required
@@ -50,18 +79,27 @@ const Login = () => {
             </button>
           </form>
 
-          <div className='text-center pb-10'>
-            <h2 className='text-2xl font-bold text-white mb-7'>Or Sign In Using</h2>
+          <div className="text-center pb-10">
+            <h2 className="text-2xl font-bold text-white mb-7">
+              Or Sign In Using
+            </h2>
 
-            <div className='flex gap-x-5 justify-center'>
-              <button className='p-3 bg-red-500 text-white rounded-full'><FaGoogle size={24}/></button>
-              <button className='p-3 bg-black text-white rounded-full'><FaGithub size={24}/></button>
+            <div className="flex gap-x-5 justify-center">
+              <button className="p-3 bg-red-500 text-white rounded-full">
+                <FaGoogle size={24} />
+              </button>
+              <button className="p-3 bg-black text-white rounded-full">
+                <FaGithub size={24} />
+              </button>
             </div>
 
-
-
             <div>
-              <h2 className='text-xl font-normal text-gray-300 mt-7'>Don&apos;t Have An Account? <Link to='/register' className='text-white font-extrabold'>Register</Link> </h2>
+              <h2 className="text-xl font-normal text-gray-300 mt-7">
+                Don&apos;t Have An Account?{" "}
+                <Link to="/register" className="text-white font-extrabold">
+                  Register
+                </Link>{" "}
+              </h2>
             </div>
           </div>
         </div>

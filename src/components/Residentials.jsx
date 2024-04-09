@@ -54,7 +54,7 @@ const Residentials = () => {
             </div>
           </div>
 
-          <div className="absolute top-0 -right-7 rotate-[30deg]">
+          <div className="absolute top-0 -right-5 rotate-[30deg]">
             <p className="text-xl font-bold text-white py-2 px-7 bg-[#1D5D9B] rounded-full">
               For Sale
             </p>
@@ -103,7 +103,7 @@ const Residentials = () => {
             </div>
           </div>
 
-          <div className="absolute top-0 -right-7 rotate-[30deg]">
+          <div className="absolute top-0 -right-5 rotate-[30deg]">
             <p className="text-xl font-bold text-white py-2 px-7 bg-[#1D5D9B] rounded-full">
               For Sale
             </p>
@@ -152,7 +152,7 @@ const Residentials = () => {
             </div>
           </div>
 
-          <div className="absolute top-0 -right-7 rotate-[30deg]">
+          <div className="absolute top-0 -right-5 rotate-[30deg]">
             <p className="text-xl font-bold text-white py-2 px-7 bg-[#1D5D9B] rounded-full">
               For Sale
             </p>
