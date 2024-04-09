@@ -85,7 +85,7 @@ const Banner = () => {
               Real State Company
             </p>
             <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
-              SakuBliss Estates: Your Gateway to Serenity
+              Saku Estates: Your Gateway to Serenity
             </h1>
 
             <button className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000">
@@ -112,7 +112,7 @@ const Banner = () => {
               Real State Company
             </p>
             <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
-              Discover Tranquility at SakuBliss Estates
+              Discover Tranquility at Saku Estates
             </h1>
 
             <button className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000">
@@ -139,7 +139,7 @@ const Banner = () => {
               Real State Company
             </p>
             <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
-              SakuBliss Estates: Where Luxury Meets Serenity
+              Saku Estates: Where Luxury Meets Serenity
             </h1>
 
             <button className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000">
@@ -166,7 +166,7 @@ const Banner = () => {
               Real State Company
             </p>
             <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
-              Experience Blissful Living at SakuBliss Estates
+              Experience Blissful Living at Saku Estates
             </h1>
 
             <button className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000">

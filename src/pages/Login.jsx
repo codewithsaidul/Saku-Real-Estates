@@ -9,7 +9,7 @@ const Login = () => {
         className="w-full min-h-screen flex justify-center items-center"
         style={{ backgroundImage: `url(${BG})` }}
       >
-        <div className="shadow-custom">
+        <div className="shadow-custom my-10 rounded-xl">
           <form className="py-10 px-5 md:p-20 border-b mb-10">
             <h2 className="text-3xl font-bold text-white mb-7">
               Login In Your Account

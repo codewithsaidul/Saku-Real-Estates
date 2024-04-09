@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-16">
           <div className="mt-5">
             <h1 className="text-3xl md:text-5xl font-bold mb-7">
-              SakuBliss Estates
+              Saku Estates
             </h1>
             <p className="text-lg font-medium text-gray-500 w-full md:w-[500px]">
               SakuBliss Estates is a wonderful choice! It&apos;s memorable,

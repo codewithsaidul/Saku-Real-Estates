@@ -9,8 +9,8 @@ const Register = () => {
         className="w-full min-h-screen flex justify-center items-center"
         style={{ backgroundImage: `url(${BG})` }}
       >
-        <div className="shadow-custom">
-          <form className="py-10 px-5 md:p-20 mb-10">
+        <div className="shadow-custom my-10 rounded-xl">
+          <form className="py-10 px-16 md:p-20 mb-10">
             <h2 className="text-3xl font-bold text-center text-white mb-7">
               Register
             </h2>

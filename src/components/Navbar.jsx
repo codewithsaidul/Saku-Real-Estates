@@ -71,7 +71,7 @@ const Navbar = () => {
             </ul>
           </div>
           <a className="text-base sm:text-2xl md:text-3xl font-bold text-[#1D5D9B]">
-            SakuBliss Estates
+            Saku Estates
           </a>
         </div>
 
