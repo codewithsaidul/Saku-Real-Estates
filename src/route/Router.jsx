@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import UpdateProfile from "../pages/UpdateProfile";
 import NotFoun from "../components/NotFoun";
+import ResidentialDetails from "../pages/ResidentialDetails";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
         {
             path: '/login',
             element: <Login/>
+        },
+        {
+            path: '/contact',
+            element: <ResidentialDetails/>
         },
 
     ]
