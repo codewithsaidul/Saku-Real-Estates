@@ -22,7 +22,6 @@ const Register = () => {
 
   const { createUser, loggedOutUser } = useContext(AuthContext);
 
-console.log(errors)
  const onSubmit = (data) => {
   // const name = data.Name;
   // const photo = data.Photo;
@@ -37,17 +36,16 @@ console.log(errors)
   resetField("Password");
   // Create a New User 
   createUser(Email, Password)
-  .then(result => {
-    updateProfile(result.user, {
-      displayName: Name,
-      photoURL: Photo
+    .then((result) => {
+      updateProfile(result.user, {
+        displayName: Name,
+        photoURL: Photo,
+      });
+      toast.success("Successfully Created Account!");
+      naviGate("/login");
+      loggedOutUser();
     })
-    //  console.log(result.user)
-    toast.success("Successfully Created Account!");
-     naviGate('/login')
-     loggedOutUser();
-    })
-    .catch(error => console.log(error.message))
+    .catch(() => toast.error("E-Mail Already In Used."));
  };
   
   return (
@@ -56,10 +54,10 @@ console.log(errors)
         className="w-full min-h-screen flex justify-center items-center"
         style={{ backgroundImage: `url(${BG})` }}
       >
-        <div className="shadow-custom my-10 rounded-xl">
+        <div className="shadow-custom my-10 rounded-xl w-full md:w-[50%]">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="py-10 px-16 md:p-20 mb-10"
+            className="py-10 px-16 md:p-20 mb-10 "
           >
             <h2 className="text-3xl font-bold text-center text-white mb-7">
               Register
@@ -123,24 +121,29 @@ console.log(errors)
                 <input
                   type="password"
                   {...register("Password", {
-                    minLength: {
-                      value: 6,
-                      message:
-                        "Password Should Be At Least 6 Character or Above",
-                    },
+                    validate: {
+                      validatedPassword: (value) => {
+                        if (value.length < 6) {
+                          return "Password Should Be At Least 6 Character or Above"; 
+                        } else if (!/[A-Z]/.test(value)) {
+                          return "Password should contain at least one uppercase letter"; 
+                        } else if (!/([a-z])/.test(value)) {
+                          return "Your password should have at least one lowercase character";
+                        }
+                      }
+                    }
                   })}
                   placeholder="Type Your Password"
                   className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
                   required
                 />
               </div>
-              <div>
-                {errors.Password && (
-                  <p className="text-base text-red-600 font-semibold">
-                    {errors.Password.message}
-                  </p>
-                )}
-              </div>
+
+              {errors.Password && (
+                <p className="text-base text-red-600 font-semibold">
+                  {errors.Password.message}
+                </p>
+              )}
             </div>
 
             <button className="p-5 shadow-custom mt-7 w-full text-white text-xl font-bold rounded-full">
