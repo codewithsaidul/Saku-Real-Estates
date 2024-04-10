@@ -18,8 +18,8 @@ const Navbar = () => {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "border border-[#1D5D9B] bg-white hover:bg-[#1D5D9B] hover:text-white duration-1000 text-black font-semibold text-lg"
-                : "bg-transparent font-semibold text-lg text-gray-400 hover:bg-white hover:text-[#1D5D9B]"
+                ? "text-[#1D5D9B] hover:bg-transparent bg-transparent font-semibold text-lg"
+                : "font-semibold text-lg hover:bg-transparent bg-transparent text-gray-400 hover:text-[#1D5D9B]"
             }
           >
             Home
@@ -30,23 +30,11 @@ const Navbar = () => {
             to="/updateProfile"
             className={({ isActive }) =>
               isActive
-                ? "border border-[#1D5D9B] bg-white hover:bg-[#1D5D9B] hover:text-white duration-1000 text-black font-semibold text-lg"
-                : "bg-transparent font-semibold text-lg text-gray-400 hover:bg-white hover:text-[#1D5D9B]"
+                ? "text-[#1D5D9B] hover:bg-transparent bg-transparent font-semibold text-lg"
+                : "font-semibold text-lg hover:bg-transparent bg-transparent text-gray-400 hover:text-[#1D5D9B]"
             }
           >
             Update Profile
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive
-                ? "border border-[#1D5D9B] bg-white hover:bg-[#1D5D9B] hover:text-white duration-1000 text-black font-semibold text-lg"
-                : "bg-transparent font-semibold text-lg text-gray-400 hover:bg-white hover:text-[#1D5D9B]"
-            }
-          >
-            Contact
           </NavLink>
         </li>
       </>
@@ -74,7 +62,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navLinks}
             </ul>
@@ -91,7 +79,7 @@ const Navbar = () => {
 
           <div>
             {user && (
-              <div className="dropdown dropdown-end">
+              <div className="dropdown dropdown-end ml-5">
                 <div
                   tabIndex={0}
                   role="button"
@@ -112,11 +100,7 @@ const Navbar = () => {
                   <li>
                     <a className="justify-between">
                       Profile
-                      <span className="badge">New</span>
                     </a>
-                  </li>
-                  <li>
-                    <a>Settings</a>
                   </li>
                   <li>
                     <button onClick={handleLoggedOut}>Logout</button>
