@@ -13,7 +13,7 @@ const UpdateProfile = () => {
 
   const { user, setUser } = useContext(AuthContext);
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState: {errors} } = useForm();
 
   const auth = getAuth(app);
 
@@ -68,19 +68,23 @@ const UpdateProfile = () => {
                 <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
                   <input
                     type="text"
-                    
                     placeholder={
                       user?.displayName ? user.displayName : "Type Your Name"
                     }
                     {...register("Name", {
-                    required: {
-                      value: true,
-                      message: "Please Fill Up This",
-                    },
+                      required: {
+                        value: true,
+                        message: "Please Fill Up This",
+                      },
                     })}
                     className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
                   />
                 </div>
+                {errors.Name && (
+                  <p className="text-base text-red-600 font-semibold">
+                    {errors.Name.message}
+                  </p>
+                )}
               </div>
 
               <div className="flex flex-col gap-2 mt-5 mb-3">
@@ -95,14 +99,19 @@ const UpdateProfile = () => {
                       user?.photoURL ? user.photoURL : "Type Your Photo URL"
                     }
                     {...register("Photo", {
-                    required: {
-                      value: true,
-                      message: "Please Fill Up This",
-                    },
+                      required: {
+                        value: true,
+                        message: "Please Fill Up This",
+                      },
                     })}
                     className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
                   />
                 </div>
+                {errors.Photo && (
+                  <p className="text-base text-red-600 font-semibold">
+                    {errors.Photo.message}
+                  </p>
+                )}
               </div>
 
               <div className="flex flex-col gap-2 mt-5 mb-3">
@@ -120,7 +129,10 @@ const UpdateProfile = () => {
                 </div>
               </div>
 
-              <button type="submit" className="p-5 shadow-custom mt-7 w-full text-white text-xl font-bold rounded-full">
+              <button
+                type="submit"
+                className="p-5 shadow-custom mt-7 w-full text-white text-xl font-bold rounded-full"
+              >
                 Update Profile
               </button>
             </form>
