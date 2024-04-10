@@ -7,7 +7,8 @@ import { AuthContext } from "../provider/AuthProvider";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaImage, FaUser } from "react-icons/fa";
+import { CiLock, CiMail, CiUnlock } from "react-icons/ci";
 
 const Register = () => {
 
@@ -72,6 +73,7 @@ const Register = () => {
               </label>
 
               <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
+                <FaUser size={24} className="text-white" />
                 <input
                   type="text"
                   placeholder="Type Your Name"
@@ -97,6 +99,7 @@ const Register = () => {
               </label>
 
               <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
+                <FaImage size={24} className="text-white" />
                 <input
                   type="text"
                   {...register("Photo", {
@@ -122,6 +125,7 @@ const Register = () => {
               </label>
 
               <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
+                <CiMail size={24} className="text-white" />
                 <input
                   type="email"
                   {...register("Email", {
@@ -146,6 +150,11 @@ const Register = () => {
                 Password
               </label>
               <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
+                {showPassword ? (
+                  <CiUnlock size={24} className="text-white" />
+                ) : (
+                  <CiLock size={24} className="text-white" />
+                )}
                 <input
                   type={showPassword ? "text" : "password"}
                   {...register("Password", {

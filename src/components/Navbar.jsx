@@ -126,11 +126,20 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link to="/login">
-            <button className="py-2 px-7 border border-[#1D5D9B] text-black font-medium ml-5 hover:bg-[#1D5D9B] hover:text-white duration-700 rounded-3xl">
-              Login
+          {user ? (
+            <button
+              onClick={handleLoggedOut}
+              className="py-2 px-7 border border-[#1D5D9B] text-black font-medium ml-5 hover:bg-[#1D5D9B] hover:text-white duration-700 rounded-3xl"
+            >
+              Sign Out
             </button>
-          </Link>
+          ) : (
+            <Link to="/login">
+              <button className="py-2 px-7 border border-[#1D5D9B] text-black font-medium ml-5 hover:bg-[#1D5D9B] hover:text-white duration-700 rounded-3xl">
+                Login
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

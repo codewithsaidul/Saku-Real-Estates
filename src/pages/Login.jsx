@@ -1,10 +1,11 @@
-import { FaEnvelopeSquare, FaGithub, FaGoogle, FaLock } from 'react-icons/fa';
+import { FaGithub, FaGoogle, FaLock } from 'react-icons/fa';
 import BG from '../assets/bg-01.jpg'
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import toast from "react-hot-toast";
+import { CiMail } from 'react-icons/ci';
 
 const Login = () => {
   const {register, handleSubmit, resetField} = useForm();
@@ -42,14 +43,14 @@ const Login = () => {
               Login In Your Account
             </h2>
 
-            <div className='border-b pb-10 w-full border-gray-400'>
+            <div className="border-b pb-10 w-full border-gray-400">
               <div className="flex flex-col gap-2 mt-5 mb-3">
                 <label className="text-xl font-semibold text-gray-300">
                   E-Mail
                 </label>
 
                 <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
-                  <FaEnvelopeSquare size={20} className="text-white" />
+                  <CiMail size={24} className="text-white" />
                   <input
                     type="email"
                     {...register("Email")}
