@@ -23,6 +23,7 @@ const Login = () => {
       
     loginUser(Email, Password)
       .then(() => {
+        
         toast.success("Successfully Login to Account!");
         naviGate("/");
       })
