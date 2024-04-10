@@ -1,0 +1,164 @@
+[
+  {
+    "image_url": "https://i.ibb.co/w70J8Y2/apartment1.jpg",
+    "estate_title": "Modern Apartment in Downtown",
+    "id": "1001",
+    "segment_name": "Apartments",
+    "description": "Welcome to your new home in the heart of downtown! This spacious apartment offers the perfect blend of modern luxury and urban convenience. Step into a bright and airy living space adorned with stylish furnishings and large windows that provide stunning views of the city skyline. The apartment features two generously sized bedrooms, each offering ample closet space and plush carpeting for added comfort. The master bedroom boasts an en-suite bathroom with a luxurious soaking tub, perfect for unwinding after a long day. The sleek and modern kitchen is a chef's dream, equipped with stainless steel appliances, granite countertops, and ample cabinet space for all your culinary needs. Enjoy your morning coffee or evening cocktails on your private balcony, where you can soak in the sights and sounds of the bustling city below. With amenities like a state-of-the-art fitness center, secure parking, and 24-hour concierge service, this apartment truly offers the ultimate urban lifestyle.",
+    "price": "$800,000",
+    "status": "sale",
+    "area": "1500 sq ft",
+    "location": "Downtown Area, City XYZ",
+    "facilities": [
+      "living room",
+      "gym",
+      "parking",
+      "balcony",
+      "security system"
+    ],
+    "bedrooms": 2,
+    "bathrooms": 2
+  },
+  {
+    "image_url": "https://i.ibb.co/PTFJ6bG/vacation.jpg",
+    "estate_title": "Luxury Beachfront Villa",
+    "id": "1002",
+    "segment_name": "Vacation",
+    "description": "Escape to paradise in this luxurious beachfront villa nestled along the pristine shores of the Caribbean Sea. From the moment you arrive, you'll be captivated by the breathtaking ocean views and the sound of gentle waves crashing against the shore. The villa boasts six spacious bedrooms, each elegantly appointed with plush furnishings and modern amenities to ensure a comfortable stay for you and your guests. Wake up to the sound of seagulls and the smell of fresh sea air as you sip your morning coffee on the expansive terrace overlooking the turquoise waters below. Spend your days lounging by the infinity pool, soaking up the sun on the private beach, or exploring the vibrant coral reefs just steps from your door. In the evenings, gather with loved ones for al fresco dinners under the stars or cozy up by the fireplace with a glass of wine. With its unparalleled beauty and luxurious amenities, this beachfront villa offers the ultimate tropical getaway.",
+    "price": "$3,500,000",
+    "status": "rent",
+    "area": "6000 sq ft",
+    "location": "Beachfront, Coastal City",
+    "facilities": [
+      "infinity pool",
+      "beach access",
+      "home theater",
+      "garden",
+      "private chef"
+    ],
+    "bedrooms": 6,
+    "bathrooms": 7
+  },
+  {
+    "image_url": "https://i.ibb.co/42n1M8r/signle-house1.jpg",
+    "estate_title": "Spacious Family Home with Garden",
+    "id": "1003",
+    "segment_name": "Single-family homes",
+    "description": "Welcome to your new family home! Nestled in a quiet suburban neighborhood, this spacious residence offers the perfect blend of comfort and convenience. Step inside and discover a warm and inviting living space adorned with stylish finishes and ample natural light. The heart of the home is the gourmet kitchen, where you'll find top-of-the-line appliances, custom cabinetry, and a large island perfect for entertaining. The adjacent family room features a cozy fireplace and French doors that open to the expansive backyard, complete with lush landscaping and a private garden oasis. Upstairs, you'll find four generously sized bedrooms, including a luxurious master suite with a spa-like ensuite bathroom and walk-in closet. Additional highlights of this home include a versatile bonus room, perfect for a home office or playroom, a three-car garage, and plenty of storage space throughout. With its tranquil setting and modern amenities, this family home offers the perfect backdrop for creating lasting memories with loved ones.",
+    "price": "$600,000",
+    "status": "sale",
+    "area": "2500 sq ft",
+    "location": "Suburban Area, City XYZ",
+    "facilities": ["garden", "playroom", "study room", "garage", "fireplace"],
+    "bedrooms": 4,
+    "bathrooms": 3
+  },
+  {
+    "image_url": "https://i.ibb.co/F7MdPTW/student-housing.jpg",
+    "estate_title": "Luxury Penthouse with City View",
+    "id": "1004",
+    "segment_name": "Student housing",
+    "description": "Live the high life in this exquisite penthouse located in the heart of the city! Perched atop a prestigious skyscraper, this stunning residence offers unparalleled luxury and breathtaking views of the skyline below. Step inside and be greeted by an expansive living space adorned with sleek finishes and floor-to-ceiling windows that flood the home with natural light. The gourmet kitchen is a chef's dream, featuring top-of-the-line appliances, quartz countertops, and a large island perfect for entertaining. The luxurious master suite boasts a spa-like ensuite bathroom, walk-in closet, and private balcony where you can enjoy morning coffee or evening cocktails with panoramic views of the city. Additional highlights of this penthouse include a state-of-the-art fitness center, rooftop terrace, and secure parking. With its prime location and luxurious amenities, this penthouse offers the ultimate urban lifestyle for discerning residents.",
+    "price": "$2,200,000",
+    "status": "rent",
+    "area": "3000 sq ft",
+    "location": "City Center, City XYZ",
+    "facilities": [
+      "rooftop terrace",
+      "fitness center",
+      "concierge service",
+      "security system",
+      "parking"
+    ],
+    "bedrooms": 3,
+    "bathrooms": 2
+  },
+  {
+    "image_url": "https://i.ibb.co/FJ9BZjb/senior-living.jpg",
+    "estate_title": "Cozy Countryside Cottage",
+    "id": "1005",
+    "segment_name": "Senior living communities",
+    "description": "Escape to the tranquility of the countryside in this charming cottage nestled amidst rolling hills and scenic landscapes. Step inside and be greeted by a cozy living space adorned with rustic touches and warm wood accents. The heart of the home is the spacious living room, where you can curl up by the fireplace with a good book or gather with loved ones for movie night. The well-appointed kitchen features modern appliances and ample counter space, making meal prep a breeze. Retreat to the comfort of the master bedroom, complete with a plush bed and ensuite bathroom with a luxurious soaking tub. Outside, you'll find a sprawling garden oasis, perfect for enjoying morning coffee or hosting al fresco dinners with friends. With its peaceful setting and charming character, this countryside cottage offers the perfect escape from the hustle and bustle of city life.",
+    "price": "$400,000",
+    "status": "sale",
+    "area": "1200 sq ft",
+    "location": "Rural Area, Outskirts of City XYZ",
+    "facilities": ["fireplace", "garden", "deck", "BBQ area", "pond"],
+    "bedrooms": 2,
+    "bathrooms": 1
+  },
+  {
+    "image_url": "https://i.ibb.co/hsJ0w96/townhose1.jpg",
+    "estate_title": "Contemporary Loft in Artsy District",
+    "id": "1006",
+    "segment_name": "Townhouses",
+    "description": "Immerse yourself in the vibrant culture of the city in this stylish loft located in the heart of the artsy district. From the moment you step inside, you'll be captivated by the industrial-chic design and eclectic decor that give this space its unique character. The open-concept layout features soaring ceilings, exposed brick walls, and expansive windows that flood the home with natural light. The gourmet kitchen is a chef's dream, equipped with high-end appliances, quartz countertops, and a large island perfect for entertaining. The spacious living area is ideal for hosting gatherings with friends or simply relaxing after a long day of exploring the city. Upstairs, you'll find the cozy bedroom loft, complete with a luxurious ensuite bathroom and plenty of closet space. Additional highlights of this loft include a private rooftop garden, perfect for enjoying panoramic views of the city skyline, and access to a state-of-the-art fitness center. With its prime location and stylish amenities, this loft offers the ultimate urban living experience for discerning residents.",
+    "price": "$900,000",
+    "status": "rent",
+    "area": "2000 sq ft",
+    "location": "Artsy District, City XYZ",
+    "facilities": [
+      "exposed brick walls",
+      "art studio",
+      "rooftop garden",
+      "gym",
+      "security system"
+    ],
+    "bedrooms": 1,
+    "bathrooms": 1
+  },
+  {
+    "image_url": "https://i.ibb.co/xFYkHGQ/apartment2.jpg",
+    "estate_title": "Luxury Apartment with River View",
+    "id": "1007",
+    "segment_name": "Apartments",
+    "description": "Experience the epitome of luxury living in this stunning apartment overlooking the river. From the moment you step inside, you'll be captivated by the elegant design and modern amenities that make this space truly special. The open-concept layout features floor-to-ceiling windows, allowing for panoramic views of the river and city skyline. The gourmet kitchen is a chef's dream, equipped with high-end appliances, quartz countertops, and a large island perfect for entertaining. The spacious living area is ideal for hosting gatherings with friends or simply relaxing after a long day. Retreat to the luxurious master suite, complete with a spa-like ensuite bathroom and walk-in closet. Additional highlights of this apartment include a private balcony, perfect for enjoying morning coffee or evening cocktails, and access to a state-of-the-art fitness center and spa. With its prime location and luxurious amenities, this apartment offers the ultimate urban lifestyle for discerning residents.",
+    "price": "$4,500/month",
+    "status": "sale",
+    "area": "1800 sq ft",
+    "location": "Riverfront, City XYZ",
+    "facilities": [
+      "balcony",
+      "fitness center",
+      "24/7 security",
+      "spa",
+      "concierge service"
+    ],
+    "bedrooms": 3,
+    "bathrooms": 2
+  },
+  {
+    "image_url": "https://i.ibb.co/sqBmr94/student-house2.jpg",
+    "estate_title": "Cozy Studio Apartment",
+    "id": "1008",
+    "segment_name": "Student housing",
+    "description": "Live the urban lifestyle in this cozy studio apartment located in the heart of the city. From the moment you step inside, you'll be greeted by a bright and inviting living space adorned with modern furnishings and stylish decor. The open-concept layout features a fully equipped kitchen, a comfortable sleeping area, and a sleek bathroom with modern fixtures and finishes. Large windows flood the space with natural light and offer views of the bustling city below. Additional highlights of this studio apartment include access to a fitness center, laundry facilities, and secure parking. With its convenient location and modern amenities, this studio apartment offers the perfect home base for students and young professionals alike.",
+    "price": "$1,200/month",
+    "status": "rent",
+    "area": "600 sq ft",
+    "location": "City Center, City XYZ",
+    "facilities": [
+      "fully furnished",
+      "laundry facilities",
+      "pet-friendly",
+      "internet access",
+      "gym"
+    ],
+    "bedrooms": 2,
+    "bathrooms": 1
+  },
+  {
+    "image_url": "https://i.ibb.co/XJGyBbW/signle-house2.jpg",
+    "estate_title": "Spacious Family Home for Rent",
+    "id": "1009",
+    "segment_name": "Single-family homes",
+    "description": "Welcome home to this spacious family retreat located in a quiet suburban neighborhood. From the moment you step inside, you'll be greeted by a warm and inviting living space adorned with stylish finishes and ample natural light. The heart of the home is the gourmet kitchen, where you'll find top-of-the-line appliances, custom cabinetry, and a large island perfect for entertaining. The adjacent family room features a cozy fireplace and French doors that open to the expansive backyard, complete with lush landscaping and a private garden oasis. Upstairs, you'll find four generously sized bedrooms, including a luxurious master suite with a spa-like ensuite bathroom and walk-in closet. Additional highlights of this home include a versatile bonus room, perfect for a home office or playroom, a three-car garage, and plenty of storage space throughout. With its tranquil setting and modern amenities, this family home offers the perfect backdrop for creating lasting memories with loved ones.",
+    "price": "$2,800/month",
+    "status": "sale",
+    "area": "2800 sq ft",
+    "location": "Suburban Area, City XYZ",
+    "facilities": ["backyard", "garage", "study room", "fire pit", "garden"],
+    "bedrooms": 4,
+    "bathrooms": 3
+  }
+]

@@ -15,7 +15,8 @@ const router = createBrowserRouter([
     children: [
         {
             path: '/',
-            element: <Home/>
+            element: <Home/>,
+            loader: () => fetch('./residential.json')
         },
         {
             path: '/updateProfile',
