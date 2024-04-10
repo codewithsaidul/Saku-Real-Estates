@@ -48,7 +48,7 @@ const ResidentialProperty = ({residential}) => {
         </div>
 
         <div className="flex justify-center mt-5">
-          <Link to={`residential/${id}`}>
+          <Link to={`/estates/${id}`}>
             <button className="text-xl font-bold py-3 text-black hover:text-white rounded-full px-7 border border-[#1D5D9B] hover:bg-[#1D5D9B] duration-1000">
               View Property
             </button>

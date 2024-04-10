@@ -10,32 +10,36 @@ import Register from "../pages/Register";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root/>,
-    errorElement: <NotFoun/>,
+    element: <Root />,
+    errorElement: <NotFoun />,
     children: [
-        {
-            path: '/',
-            element: <Home/>,
-            loader: () => fetch('./residential.json')
-        },
-        {
-            path: '/updateProfile',
-            element: <UpdateProfile/>
-        },
-        {
-            path: '/login',
-            element: <Login/>
-        },
-        {
-            path: '/register',
-            element: <Register/>
-        },
-        {
-            path: '/contact',
-            element: <ResidentialDetails/>
-        },
-
-    ]
+      {
+        path: "/",
+        element: <Home />,
+        loader: () => fetch("/residential.json"),
+      },
+      {
+        path: "/estates/:id",
+        element: <ResidentialDetails />,
+        loader: () => fetch("/residential.json"),
+      },
+      {
+        path: "/updateProfile",
+        element: <UpdateProfile />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/contact",
+        element: <ResidentialDetails />,
+      },
+    ],
   },
 ]);
 

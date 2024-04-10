@@ -1,15 +1,29 @@
 import { FaBath, FaBed } from 'react-icons/fa';
-import ResientialBannerIMG from '../assets/apartment1.jpg'
+// import ResientialBannerIMG from '../assets/apartment1.jpg'
 import { FaLocationDot } from 'react-icons/fa6';
+import { useLoaderData, useParams } from "react-router-dom";
+
+
 const ResidentialDetails = () => {
+
+    const residentials = useLoaderData();
+    const {id} = useParams();
+
+    
+    const residentailId = parseInt(id)
+
+    const residential = residentials.find(
+      (resident) => resident.id === residentailId
+    );
+
   return (
-    <div className="max-w-[1170px] mx-auto">
+    <div className="max-w-[1170px] mx-auto px-5">
       <div className="relative mt-10">
         <figure className="hero">
           <img
             className="w-full h-96 rounded-lg"
-            src={ResientialBannerIMG}
-            alt=""
+            src={residential.image_url}
+            alt="image"
           />
           <div className="hero-overlay bg-opacity-50 rounded-lg"></div>
         </figure>
@@ -39,26 +53,28 @@ const ResidentialDetails = () => {
             bustle of city life.
           </p>
 
-          <div className="flex items-center gap-x-10 mt-3">
-            <p className="flex gap-x-2 items-center text-lg font-medium text-gray-400">
-              <FaBed size={20} className="text-[#1D5D9B]" />
-              <span>2 Bed Room</span>
-            </p>
-            <p className="flex gap-x-2 items-center text-lg font-medium text-gray-400">
-              <FaBath size={20} className="text-[#1D5D9B]" />
-              <span>2 Bath Room</span>
-            </p>
+          <div className="flex flex-col md:flex-row md:items-center items-start gap-y-5 md:gap-x-10 mt-3">
+            <div className='flex gap-x-3'>
+              <p className="flex  gap-x-2 items-center text-lg font-medium text-gray-400">
+                <FaBed size={20} className="text-[#1D5D9B]" />
+                <span>2 Bed Room</span>
+              </p>
+              <p className="flex gap-x-2 items-center text-lg font-medium text-gray-400">
+                <FaBath size={20} className="text-[#1D5D9B]" />
+                <span>2 Bath Room</span>
+              </p>
+            </div>
 
             <p className="text-xl font-semibold text-[#1D5D9B]">
               Area 1200 sq ft
             </p>
           </div>
 
-          <div className="flex items-center gap-x-12 mt-7">
+          <div className="flex flex-col gap-y-3 md:flex-row md:items-center md:gap-x-12 mt-7">
             <p className="text-xl font-semibold text-slate-600">
               Price: $400,000
             </p>
-            <span className="flex gap-x-5 items-center text-xl font-semibold text-slate-600">
+            <span className="flex gap-x-5 items-center text-base sm:text-xl font-semibold text-slate-600">
               Location :
               <span className="flex items-center gap-2">
                 <FaLocationDot />
@@ -70,7 +86,7 @@ const ResidentialDetails = () => {
           <div className="mt-7 flex gap-x-3 items-center">
             <h2 className="text-xl font-semibold">Facilities: </h2>
 
-            <div className="flex gap-2">
+            <div className="grid grid-cols-3 md:grid-cols-5 items-center justify-center gap-2">
               <span className="text-base font-normal text-gray-400">
                 fireplace
               </span>
