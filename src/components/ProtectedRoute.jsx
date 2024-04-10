@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-import { Link } from "react-router-dom";
+
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
 import BG from "../assets/bg-01.jpg";
 
 const ProtectedRoute = ({ children }) => {
@@ -17,11 +19,11 @@ const ProtectedRoute = ({ children }) => {
 
   if (user) {
     return children;
-  }
+  } 
 
   return (
     <div
-      className="w-full min-h-screen flex justify-center items-center"
+      className="w-full mt-5 min-h-screen flex justify-center items-center"
       style={{ backgroundImage: `url(${BG})` }}
     >
       <div className="text-center">

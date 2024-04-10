@@ -9,7 +9,9 @@ import { CiMail } from 'react-icons/ci';
 
 const Login = () => {
   const {register, handleSubmit, resetField} = useForm();
-  const {loginUser} = useContext(AuthContext);
+
+  const { loginUser, googleLoggedIn, githubLoggedIn } = useContext(AuthContext);
+
   const naviGate = useNavigate();
 
   const onSubmit = data => {
@@ -24,17 +26,36 @@ const Login = () => {
         toast.success("Successfully Login to Account!");
         naviGate("/");
       })
-      .catch(() => toast.error("Failed To Login!"));
+      .catch(() => toast.error("Your Email or Password Are Wrong"));
   }
 
+
+  const handleGoogleLogin = () => {
+    googleLoggedIn()
+      .then(() => {
+        toast.success("Successfully Login to Account!");
+        naviGate("/");
+      })
+      .catch(() => toast.error("Your Email or Password Are Wrong"));
+  }
+
+
+  const handleGithubLogin = () => {
+    githubLoggedIn()
+      .then(() => {
+        toast.success("Successfully Login to Account!");
+        naviGate("/");
+      })
+      .catch(() => toast.error("Your Email or Password Are Wrong"));
+  }
 
   return (
     <div>
       <div
-        className="w-full min-h-screen flex justify-center items-center"
+        className="w-full min-h-screen flex justify-center items-center px-5"
         style={{ backgroundImage: `url(${BG})` }}
       >
-        <div className="shadow-custom my-10 rounded-xl w-[50%]">
+        <div className="shadow-custom my-10 rounded-xl w-full md:w-[50%]">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="py-10 px-5 md:p-20"
@@ -88,10 +109,16 @@ const Login = () => {
             </h2>
 
             <div className="flex gap-x-5 justify-center">
-              <button className="p-3 bg-red-500 text-white rounded-full">
+              <button
+                onClick={handleGoogleLogin}
+                className="p-3 bg-red-500 text-white rounded-full"
+              >
                 <FaGoogle size={24} />
               </button>
-              <button className="p-3 bg-black text-white rounded-full">
+              <button
+                onClick={handleGithubLogin}
+                className="p-3 bg-black text-white rounded-full"
+              >
                 <FaGithub size={24} />
               </button>
             </div>
