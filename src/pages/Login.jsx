@@ -20,10 +20,10 @@ const Login = () => {
       
     loginUser(Email, Password)
       .then(() => {
-        toast.success("Successfully toasted!")
-        naviGate('/')
+        toast.success("Successfully Login to Account!");
+        naviGate("/");
       })
-      .catch((error) => console.error(error.message));
+      .catch(() => toast.error("Failed To Login!"));
   }
 
 
@@ -33,50 +33,52 @@ const Login = () => {
         className="w-full min-h-screen flex justify-center items-center"
         style={{ backgroundImage: `url(${BG})` }}
       >
-        <div className="shadow-custom my-10 rounded-xl">
+        <div className="shadow-custom my-10 rounded-xl w-[50%]">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="py-10 px-5 md:p-20 border-b mb-10"
+            className="py-10 px-5 md:p-20"
           >
             <h2 className="text-3xl font-bold text-white mb-7">
               Login In Your Account
             </h2>
 
-            <div className="flex flex-col gap-2 mt-5 mb-3">
-              <label className="text-xl font-semibold text-gray-300">
-                E-Mail
-              </label>
+            <div className='border-b pb-10 w-full border-gray-400'>
+              <div className="flex flex-col gap-2 mt-5 mb-3">
+                <label className="text-xl font-semibold text-gray-300">
+                  E-Mail
+                </label>
 
-              <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
-                <FaEnvelopeSquare size={20} className="text-white" />
-                <input
-                  type="email"
-                  {...register("Email")}
-                  placeholder="Type Your Email"
-                  className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
-                  required
-                />
+                <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
+                  <FaEnvelopeSquare size={20} className="text-white" />
+                  <input
+                    type="email"
+                    {...register("Email")}
+                    placeholder="Type Your Email"
+                    className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
+                    required
+                  />
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-xl font-semibold text-gray-300">
-                Password
-              </label>
-              <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
-                <FaLock size={20} className="text-white" />
-                <input
-                  type="password"
-                  {...register("Password")}
-                  placeholder="Type Your Password"
-                  className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
-                  required
-                />
+              <div className="flex flex-col gap-2">
+                <label className="text-xl font-semibold text-gray-300">
+                  Password
+                </label>
+                <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
+                  <FaLock size={20} className="text-white" />
+                  <input
+                    type="password"
+                    {...register("Password")}
+                    placeholder="Type Your Password"
+                    className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
+                    required
+                  />
+                </div>
               </div>
-            </div>
 
-            <button className="p-5 shadow-custom mt-7 w-full text-white text-xl font-bold rounded-full">
-              Login
-            </button>
+              <button className="p-5 shadow-custom mt-7 w-full text-white text-xl font-bold rounded-full">
+                Login
+              </button>
+            </div>
           </form>
 
           <div className="text-center pb-10">

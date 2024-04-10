@@ -1,4 +1,4 @@
-import { FaEnvelopeSquare, FaLock } from "react-icons/fa";
+
 import { updateProfile } from "firebase/auth";
 import { useForm } from "react-hook-form";
 import BG from "../assets/bg-01.jpg";
@@ -51,13 +51,13 @@ const Register = () => {
   return (
     <div>
       <div
-        className="w-full min-h-screen flex justify-center items-center"
+        className="w-full mt-5 flex justify-center items-center"
         style={{ backgroundImage: `url(${BG})` }}
       >
         <div className="shadow-custom my-10 rounded-xl w-full md:w-[50%]">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="py-10 px-16 md:p-20 mb-10 "
+            className="py-10 px-16 md:p-20 md:py-10 mb-10 "
           >
             <h2 className="text-3xl font-bold text-center text-white mb-7">
               Register
@@ -69,14 +69,23 @@ const Register = () => {
               </label>
 
               <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
-                <FaEnvelopeSquare size={20} className="text-white" />
                 <input
                   type="text"
                   placeholder="Type Your Name"
-                  {...register("Name")}
+                  {...register("Name", {
+                    required: {
+                      value: true,
+                      message: "Please Fill Up This First",
+                    },
+                  })}
                   className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
                 />
               </div>
+              {errors.Name && (
+                <p className="text-base text-red-600 font-semibold">
+                  {errors.Name.message}
+                </p>
+              )}
             </div>
 
             <div className="flex flex-col gap-2 mt-5 mb-3">
@@ -85,14 +94,23 @@ const Register = () => {
               </label>
 
               <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
-                <FaEnvelopeSquare size={20} className="text-white" />
                 <input
                   type="text"
-                  {...register("Photo")}
-                  placeholder="Type Your Phot URL"
+                  {...register("Photo", {
+                    required: {
+                      value: true,
+                      message: "Please Fill Up This ",
+                    },
+                  })}
+                  placeholder="Type Your Photo URL"
                   className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
                 />
               </div>
+              {errors.Photo && (
+                <p className="text-base text-red-600 font-semibold">
+                  {errors.Photo.message}
+                </p>
+              )}
             </div>
 
             <div className="flex flex-col gap-2 mt-5 mb-3">
@@ -101,15 +119,23 @@ const Register = () => {
               </label>
 
               <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
-                <FaEnvelopeSquare size={20} className="text-white" />
                 <input
                   type="email"
-                  {...register("Email")}
+                  {...register("Email", {
+                    required: {
+                      value: true,
+                      message: "Please Fill Up This",
+                    },
+                  })}
                   placeholder="Type Your Email"
                   className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
-                  required
                 />
               </div>
+              {errors.Email && (
+                <p className="text-base text-red-600 font-semibold">
+                  {errors.Email.message}
+                </p>
+              )}
             </div>
 
             <div className="flex flex-col gap-2">
@@ -117,25 +143,23 @@ const Register = () => {
                 Password
               </label>
               <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
-                <FaLock size={20} className="text-white" />
                 <input
                   type="password"
                   {...register("Password", {
                     validate: {
                       validatedPassword: (value) => {
                         if (value.length < 6) {
-                          return "Password Should Be At Least 6 Character or Above"; 
+                          return "Password Should Be At Least 6 Character or Above";
                         } else if (!/[A-Z]/.test(value)) {
-                          return "Password should contain at least one uppercase letter"; 
+                          return "Password should contain at least one uppercase letter";
                         } else if (!/([a-z])/.test(value)) {
                           return "Your password should have at least one lowercase character";
                         }
-                      }
-                    }
+                      },
+                    },
                   })}
                   placeholder="Type Your Password"
                   className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
-                  required
                 />
               </div>
 

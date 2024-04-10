@@ -8,8 +8,7 @@ const Navbar = () => {
 
   const handleLoggedOut = () => {
     loggedOutUser()
-    .then(() => console.log("logged out user"))
-    .catch(error => console.error(error.message))
+      
   }
 
     const navLinks = (
@@ -96,7 +95,8 @@ const Navbar = () => {
                 <div
                   tabIndex={0}
                   role="button"
-                  className="btn btn-ghost btn-circle avatar"
+                  data-tip={user.displayName}
+                  className="avatar tooltip tooltip-bottom"
                 >
                   <div className="w-10 rounded-full">
                     <img

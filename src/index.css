@@ -21,3 +21,11 @@
     /* height: 600px; */
     object-fit: cover;
 }
+
+
+.myFile::file-selector-button {
+    background: transparent; 
+    /* border: none; */
+    padding: 10px 0;
+    border-radius: 100px;
+}
