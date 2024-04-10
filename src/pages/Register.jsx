@@ -2,13 +2,16 @@
 import { updateProfile } from "firebase/auth";
 import { useForm } from "react-hook-form";
 import BG from "../assets/bg-01.jpg";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
+
+  const [showPassword, setShowPassword] = useState(false);
 
    const naviGate = useNavigate();
   
@@ -144,7 +147,7 @@ const Register = () => {
               </label>
               <div className="w-full shadow-custom rounded-full flex items-center py-2 px-3">
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   {...register("Password", {
                     validate: {
                       validatedPassword: (value) => {
@@ -161,6 +164,14 @@ const Register = () => {
                   placeholder="Type Your Password"
                   className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
                 />
+
+                <span onClick={() => setShowPassword(!showPassword)}>
+                  {showPassword ? (
+                    <FaEyeSlash size={24} className="text-white" />
+                  ) : (
+                    <FaEye size={24} className="text-white" />
+                  )}
+                </span>
               </div>
 
               {errors.Password && (
