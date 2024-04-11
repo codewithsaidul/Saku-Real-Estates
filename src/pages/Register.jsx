@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash, FaImage, FaUser } from "react-icons/fa";
 import { CiLock, CiMail, CiUnlock } from "react-icons/ci";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
@@ -55,6 +56,9 @@ const Register = () => {
   
   return (
     <div>
+      <Helmet>
+        <title>Saku Estates || Register</title>
+      </Helmet>
       <div
         className="w-full mt-5 flex justify-center items-center"
         style={{ backgroundImage: `url(${BG})` }}

@@ -6,6 +6,7 @@ import toast from 'react-hot-toast'
 import { getAuth, updateProfile } from "firebase/auth";
 import app from "../firebase/firebase.config";
 import {useNavigate} from 'react-router-dom'
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -46,6 +47,9 @@ const UpdateProfile = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Saku Estates || Update Profile</title>
+      </Helmet>
       <div>
         <div
           className="w-full mt-5 flex justify-center items-center px-5"

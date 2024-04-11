@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import toast from "react-hot-toast";
 import { CiMail } from 'react-icons/ci';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
   const {register, handleSubmit, resetField} = useForm();
@@ -32,8 +33,7 @@ const Login = () => {
 
   const handleGoogleLogin = () => {
     googleLoggedIn()
-      .then((result) => {
-        console.log(result.user)
+      .then(() => {
         toast.success("Successfully Login to Account!");
         naviGate("/");
       })
@@ -52,6 +52,9 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Saku Estates || Login</title>
+      </Helmet>
       <div
         className="w-full min-h-screen flex justify-center items-center px-5"
         style={{ backgroundImage: `url(${BG})` }}

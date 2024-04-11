@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { FaBath, FaBed } from 'react-icons/fa';
 // import ResientialBannerIMG from '../assets/apartment1.jpg'
 import { FaLocationDot } from 'react-icons/fa6';
@@ -18,6 +19,9 @@ const ResidentialDetails = () => {
 
   return (
     <div className="max-w-[1170px] mx-auto px-5">
+      <Helmet>
+        <title>Saku Estates || Residential Details</title>
+      </Helmet>
       <div className="relative mt-10">
         <figure className="hero">
           <img

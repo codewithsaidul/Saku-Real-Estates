@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { AuthContext } from "../provider/AuthProvider"
+import { Helmet } from "react-helmet-async";
 
 
 const Profile = () => {
@@ -7,6 +8,9 @@ const Profile = () => {
     
   return (
     <div className="flex justify-center items-center min-h-screen px-5">
+      <Helmet>
+        <title>Saku Estates || Profile</title>
+      </Helmet>
       <div className="shadow-custom w-full p-5 lg:w-[70%] lg:p-20 flex flex-col gap-10 items-center rounded-3xl">
         <figure>
           <img
