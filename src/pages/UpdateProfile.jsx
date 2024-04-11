@@ -20,26 +20,26 @@ const UpdateProfile = () => {
    const naviGate = useNavigate();
 
   const onSubmit = data => {
-    const name = data.Name;
-    const photo = data.Photo;
-    const email = data.Email;
+
+
+    const { Name, Photo, Email} = data;
 
     updateProfile(auth.currentUser, {
-      displayName: name,
-      photoURL: photo,
-      email: email,
+      displayName: Name,
+      photoURL: Photo,
+      email: Email,
     })
       .then(() => {
-        if(user) {
+        if (user) {
           setUser({
             ...user,
-            displayName: name,
-            photoURL: photo,
-            email: email,
+            displayName: Name,
+            photoURL: Photo,
+            email: Email,
           });
         }
         toast.success("Profile Updated Successfully");
-        naviGate('/')
+        naviGate("/");
       })
       .catch(() => toast.error("Profile Updated Failed"));
   };
@@ -77,6 +77,7 @@ const UpdateProfile = () => {
                         message: "Please Fill Up This",
                       },
                     })}
+                    defaultValue={user.displayName}
                     className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
                   />
                 </div>
@@ -104,6 +105,7 @@ const UpdateProfile = () => {
                         message: "Please Fill Up This",
                       },
                     })}
+                    defaultValue={user.photoURL}
                     className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
                   />
                 </div>
@@ -124,6 +126,7 @@ const UpdateProfile = () => {
                     type="email"
                     placeholder={user?.email ? user.email : "Type Your Email"}
                     {...register("Email")}
+                    defaultValue={user.email}
                     className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
                   />
                 </div>

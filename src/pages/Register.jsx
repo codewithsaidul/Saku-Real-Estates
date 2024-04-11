@@ -24,7 +24,7 @@ const Register = () => {
     formState: { errors },
   } = useForm()
 
-  const { createUser, loggedOutUser } = useContext(AuthContext);
+  const { user, setUser,  createUser, loggedOutUser } = useContext(AuthContext);
 
  const onSubmit = (data) => {
   // const name = data.Name;
@@ -44,7 +44,8 @@ const Register = () => {
       updateProfile(result.user, {
         displayName: Name,
         photoURL: Photo,
-      });
+      })
+      setUser({ ...user, isplayName: Name, photoURL: Photo, });
       toast.success("Successfully Created Account!");
       naviGate("/login");
       loggedOutUser();

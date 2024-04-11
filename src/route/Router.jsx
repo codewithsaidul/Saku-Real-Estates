@@ -7,6 +7,7 @@ import NotFoun from "../components/NotFoun";
 import ResidentialDetails from "../pages/ResidentialDetails";
 import Register from "../pages/Register";
 import ProtectedRoute from "../components/ProtectedRoute";
+import Profile from "../pages/Profile";
 // import PrivateRoute from "../components/PrivateRoute";
 
 const router = createBrowserRouter([
@@ -44,6 +45,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/profile",
+        element: (
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
+        ),
       },
     ],
   },

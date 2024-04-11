@@ -98,9 +98,9 @@ const Navbar = () => {
                   className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52"
                 >
                   <li>
-                    <a className="justify-between">
+                    <Link to='/profile' className="justify-between">
                       Profile
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <button onClick={handleLoggedOut}>Logout</button>
@@ -113,9 +113,9 @@ const Navbar = () => {
           {user ? (
             <button
               onClick={handleLoggedOut}
-              className="py-2 px-7 border border-[#1D5D9B] text-black font-medium ml-5 hover:bg-[#1D5D9B] hover:text-white duration-700 rounded-3xl"
+              className="py-2 px-3 md:px-7 border border-[#1D5D9B] text-black font-medium ml-5 hover:bg-[#1D5D9B] hover:text-white duration-700 rounded-3xl"
             >
-              Sign Out
+              Log Out
             </button>
           ) : (
             <Link to="/login">
