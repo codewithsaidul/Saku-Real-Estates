@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import About from "../components/About";
 import Banner from "../components/Banner";
 import Residentials from "../components/Residentials";
+import Testimonial from "../components/Testimonial";
 // import BannerImg from '../assets/building.jpg'
 
 const Home = () => {
@@ -20,6 +21,13 @@ const Home = () => {
         <div className="mt-20">
           <Residentials />
         </div>
+
+
+        <div className="mt-20">
+          <Testimonial />
+        </div>
+
+       
       </div>
     </div>
   );
