@@ -28,8 +28,8 @@ const Testimonial = () => {
 
       <div className="flex justify-center mx-auto">
         <Swiper
-          slidesPerView={2}
-          spaceBetween={0}
+          slidesPerView={1}
+          spaceBetween={20}
           loop={true}
           centeredSlides={true}
           autoplay={{
