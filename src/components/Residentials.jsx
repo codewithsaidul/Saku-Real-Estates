@@ -2,15 +2,18 @@
 // import { FaBath, FaBed } from 'react-icons/fa';
 import { useLoaderData } from "react-router-dom";
 import ResidentialProperty from './ResidentialProperty';
+import { Helmet } from "react-helmet-async";
 
 
 
 const Residentials = () => {
   const residentials = useLoaderData();
-
+ 
   return (
     <div>
-      
+      <Helmet>
+        <title>Saku Estates || Estates</title>
+      </Helmet>
       <div className="text-center mt-40 mb-20">
         <h2 className="text-2xl font-bold text-[#1D5D9B] mb-1">PROPERTIES</h2>
         <h3 className="text-4xl font-bold">

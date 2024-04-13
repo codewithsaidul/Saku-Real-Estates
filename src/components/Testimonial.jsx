@@ -19,8 +19,8 @@ const Testimonial = () => {
 
       <div className="flex justify-center mx-auto">
         <Swiper
-          slidesPerView={1}
-          spaceBetween={10}
+          slidesPerView={2}
+          spaceBetween={0}
           loop={true}
           centeredSlides={true}
           autoplay={{
@@ -41,7 +41,7 @@ const Testimonial = () => {
             },
             1024: {
               slidesPerView: 2,
-              spaceBetween: 20,
+              spaceBetween: 0,
             },
           }}
           modules={[Autoplay, Pagination]}

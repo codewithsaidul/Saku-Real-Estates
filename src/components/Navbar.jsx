@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { FaUser } from "react-icons/fa";
 
 const Navbar = () => {
 
@@ -25,17 +26,61 @@ const Navbar = () => {
             Home
           </NavLink>
         </li>
+
         <li>
           <NavLink
-            to="/updateProfile"
+            to="/login"
             className={({ isActive }) =>
               isActive
                 ? "text-[#1D5D9B] hover:bg-transparent bg-transparent font-semibold text-lg"
                 : "font-semibold text-lg hover:bg-transparent bg-transparent text-gray-400 hover:text-[#1D5D9B]"
             }
           >
-            Update Profile
+            Login
           </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/estates"
+            className={({ isActive }) =>
+              isActive
+                ? "text-[#1D5D9B] hover:bg-transparent bg-transparent font-semibold text-lg"
+                : "font-semibold text-lg hover:bg-transparent bg-transparent text-gray-400 hover:text-[#1D5D9B]"
+            }
+          >
+            Estates
+          </NavLink>
+        </li>
+
+        <li>
+          {user && (
+            <NavLink
+              to="/updateProfile"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#1D5D9B] hover:bg-transparent bg-transparent font-semibold text-lg"
+                  : "font-semibold text-lg hover:bg-transparent bg-transparent text-gray-400 hover:text-[#1D5D9B]"
+              }
+            >
+              Update Profile
+            </NavLink>
+          )}
+        </li>
+
+        <li>
+          {user && (
+            <NavLink
+              to="/profile"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#1D5D9B] hover:bg-transparent bg-transparent font-semibold text-lg"
+                  : "font-semibold text-lg hover:bg-transparent bg-transparent text-gray-400 hover:text-[#1D5D9B]"
+              }
+            >
+             User Profile
+            </NavLink>
+          )}
         </li>
       </>
     );
@@ -72,14 +117,14 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="navbar-end">
-          <div className="hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">{navLinks}</ul>
-          </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        </div>
 
+        <div className="navbar-end">
+          
           <div>
-            {user && (
-              <div className="dropdown dropdown-end ml-5">
+            {user ? <div className="dropdown dropdown-end ml-5">
                 <div
                   tabIndex={0}
                   role="button"
@@ -89,7 +134,7 @@ const Navbar = () => {
                   <div className="w-10 rounded-full">
                     <img
                       alt="Tailwind CSS Navbar component"
-                      src={user.photoURL}
+                      src={user?.photoURL ? user.photoURL : <FaUser size={24}/> }
                     />
                   </div>
                 </div>
@@ -98,7 +143,7 @@ const Navbar = () => {
                   className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52"
                 >
                   <li>
-                    <Link to='/profile' className="justify-between">
+                    <Link to="/profile" className="justify-between">
                       Profile
                     </Link>
                   </li>
@@ -107,7 +152,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </div>
-            )}
+              : <FaUser size={24}/>}
           </div>
 
           {user ? (
