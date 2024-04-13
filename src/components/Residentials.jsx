@@ -10,7 +10,7 @@ const Residentials = () => {
   const residentials = useLoaderData();
  
   return (
-    <div>
+    <div className="max-w-[1170px] w-full mx-auto px-5">
       <Helmet>
         <title>Saku Estates || Estates</title>
       </Helmet>

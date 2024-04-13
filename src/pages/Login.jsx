@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet-async';
 const Login = () => {
   const {register, handleSubmit, resetField} = useForm();
 
-  const { loginUser, googleLoggedIn, githubLoggedIn } = useContext(AuthContext);
+  const { loginUser, googleLoggedIn, githubLoggedIn, setUser } = useContext(AuthContext);
 
   const naviGate = useNavigate();
 
@@ -23,7 +23,8 @@ const Login = () => {
 
       
     loginUser(Email, Password)
-      .then(() => {
+      .then((result) => {
+        setUser(result.user)
         toast.success("Successfully Login to Account!");
         naviGate("/");
       })

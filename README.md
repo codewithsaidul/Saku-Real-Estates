@@ -1,6 +1,6 @@
-# Book Vibe
+# Saku Estates
 
-- [ Book Vibe ](https://react-book-vibes.netlify.app/)
+- [ Saku Estates ](https://react-book-vibes.netlify.app/)
 
 ![website image](./src/assets/web.png)
 
@@ -20,3 +20,9 @@
   your preferences and saved properties.
 
 
+
+# NPM Pakages 
+
+- [ AOS Package ](https://www.npmjs.com/package/aos/)
+- [ React Hook form ](https://react-hook-form.com/)
+- [ Swiper slider ](https://swiperjs.com/)
