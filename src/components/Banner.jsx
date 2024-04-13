@@ -50,9 +50,7 @@ const Banner = () => {
         <div className="relative">
           <figure className="w-full hero rounded-lg">
             <img
-              data-aos="fade-down"
-              data-aos-duration="700"
-              data-aos-easing="ease-in-out"
+              
               className="h-[300px] md:h-[600px] rounded-lg"
               src={BannerImg1}
               alt=""
@@ -95,9 +93,6 @@ const Banner = () => {
         <div className="relative">
           <figure className="w-full hero rounded-lg">
             <img
-              data-aos="fade-down"
-              data-aos-duration="700"
-              data-aos-easing="ease-in-out"
               className="h-[300px] md:h-[600px] rounded-lg"
               src={BannerImg2}
               alt=""
@@ -140,9 +135,6 @@ const Banner = () => {
         <div className="relative">
           <figure className="w-full hero rounded-lg">
             <img
-              data-aos="fade-down"
-              data-aos-duration="700"
-              data-aos-easing="ease-in-out"
               className="h-[300px] md:h-[600px] rounded-lg"
               src={BannerImg3}
               alt=""
@@ -185,9 +177,6 @@ const Banner = () => {
         <div className="relative">
           <figure className="w-full hero rounded-lg">
             <img
-              data-aos="fade-down"
-              data-aos-duration="700"
-              data-aos-easing="ease-in-out"
               className="h-[300px] md:h-[600px] rounded-lg"
               src={BannerImg4}
               alt=""
@@ -230,9 +219,6 @@ const Banner = () => {
         <div className="relative">
           <figure className="w-full hero rounded-lg">
             <img
-              data-aos="fade-down"
-              data-aos-duration="700"
-              data-aos-easing="ease-in-out"
               className="h-[300px] md:h-[600px] rounded-lg"
               src={BannerImg5}
               alt=""
