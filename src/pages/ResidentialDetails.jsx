@@ -3,6 +3,10 @@ import { FaBath, FaBed } from 'react-icons/fa';
 // import ResientialBannerIMG from '../assets/apartment1.jpg'
 import { FaLocationDot } from 'react-icons/fa6';
 import { useLoaderData, useParams } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 const ResidentialDetails = () => {
@@ -22,7 +26,12 @@ const ResidentialDetails = () => {
       <Helmet>
         <title>Saku Estates || Residential Details</title>
       </Helmet>
-      <div className="relative mt-10">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        className="relative mt-10"
+      >
         <figure className="hero">
           <img
             className="w-full h-96 rounded-lg"

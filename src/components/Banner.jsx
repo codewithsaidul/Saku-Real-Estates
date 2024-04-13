@@ -4,6 +4,10 @@ import BannerImg2 from "../assets/banner2.jpg";
 import BannerImg3 from "../assets/banner3.jpg";
 import BannerImg4 from "../assets/banner4.jpg";
 import BannerImg5 from "../assets/banner5.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -46,6 +50,9 @@ const Banner = () => {
         <div className="relative">
           <figure className="w-full hero rounded-lg">
             <img
+              data-aos="fade-down"
+              data-aos-duration="700"
+              data-aos-easing="ease-in-out"
               className="h-[300px] md:h-[600px] rounded-lg"
               src={BannerImg1}
               alt=""
@@ -54,14 +61,29 @@ const Banner = () => {
           </figure>
 
           <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10">
-            <p className="text-lg font-semibold text-white mb-3">
+            <p
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="text-lg font-semibold text-white mb-3"
+            >
               Real State Company
             </p>
-            <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
+            <h1
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto"
+            >
               Creative Style For Your Next Home
             </h1>
 
-            <button className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000">
+            <button
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000"
+            >
               Explore Now
             </button>
           </div>
@@ -73,6 +95,9 @@ const Banner = () => {
         <div className="relative">
           <figure className="w-full hero rounded-lg">
             <img
+              data-aos="fade-down"
+              data-aos-duration="700"
+              data-aos-easing="ease-in-out"
               className="h-[300px] md:h-[600px] rounded-lg"
               src={BannerImg2}
               alt=""
@@ -81,14 +106,29 @@ const Banner = () => {
           </figure>
 
           <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10">
-            <p className="text-lg font-semibold text-white mb-3">
+            <p
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="text-lg font-semibold text-white mb-3"
+            >
               Real State Company
             </p>
-            <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
+            <h1
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto"
+            >
               Saku Estates: Your Gateway to Serenity
             </h1>
 
-            <button className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000">
+            <button
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000"
+            >
               Explore Now
             </button>
           </div>
@@ -100,6 +140,9 @@ const Banner = () => {
         <div className="relative">
           <figure className="w-full hero rounded-lg">
             <img
+              data-aos="fade-down"
+              data-aos-duration="700"
+              data-aos-easing="ease-in-out"
               className="h-[300px] md:h-[600px] rounded-lg"
               src={BannerImg3}
               alt=""
@@ -108,14 +151,29 @@ const Banner = () => {
           </figure>
 
           <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10">
-            <p className="text-lg font-semibold text-white mb-3">
+            <p
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="text-lg font-semibold text-white mb-3"
+            >
               Real State Company
             </p>
-            <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto"
+            >
               Discover Tranquility at Saku Estates
             </h1>
 
-            <button className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000">
+            <button
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000"
+            >
               Explore Now
             </button>
           </div>
@@ -127,6 +185,9 @@ const Banner = () => {
         <div className="relative">
           <figure className="w-full hero rounded-lg">
             <img
+              data-aos="fade-down"
+              data-aos-duration="700"
+              data-aos-easing="ease-in-out"
               className="h-[300px] md:h-[600px] rounded-lg"
               src={BannerImg4}
               alt=""
@@ -135,14 +196,29 @@ const Banner = () => {
           </figure>
 
           <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10">
-            <p className="text-lg font-semibold text-white mb-3">
+            <p
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="text-lg font-semibold text-white mb-3"
+            >
               Real State Company
             </p>
-            <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto"
+            >
               Saku Estates: Where Luxury Meets Serenity
             </h1>
 
-            <button className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000">
+            <button
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000"
+            >
               Explore Now
             </button>
           </div>
@@ -154,6 +230,9 @@ const Banner = () => {
         <div className="relative">
           <figure className="w-full hero rounded-lg">
             <img
+              data-aos="fade-down"
+              data-aos-duration="700"
+              data-aos-easing="ease-in-out"
               className="h-[300px] md:h-[600px] rounded-lg"
               src={BannerImg5}
               alt=""
@@ -162,14 +241,29 @@ const Banner = () => {
           </figure>
 
           <div className="absolute top-16 md:top-28 left-0 right-0 text-center md:p-10">
-            <p className="text-lg font-semibold text-white mb-3">
+            <p
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="text-lg font-semibold text-white mb-3"
+            >
               Real State Company
             </p>
-            <h1 className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="text-3xl md:text-6xl font-bold text-white mb-5 w-full md:w-[600px] mx-auto"
+            >
               Experience Blissful Living at Saku Estates
             </h1>
 
-            <button className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000">
+            <button
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              className="py-2 px-5 border border-[#1D5D9B]  text-white bg-transparent hover:bg-[#1D5D9B] rounded-full duration-1000"
+            >
               Explore Now
             </button>
           </div>

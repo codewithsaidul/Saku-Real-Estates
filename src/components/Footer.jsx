@@ -7,7 +7,12 @@ const Footer = () => {
     <div className="mt-20 bg-black text-white">
       <footer className="max-w-[1170px] mx-auto py-20 px-4 text-center lg:text-left">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-16">
-          <div className="mt-5">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            className="mt-5"
+          >
             <h1 className="text-3xl md:text-5xl font-bold mb-7">
               Saku Estates
             </h1>
@@ -50,7 +55,12 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="text-center">
+          <div
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            className="text-center"
+          >
             <h2 className="text-3xl font-semibold mb-3 border-b pb-2">
               Company
             </h2>
@@ -91,7 +101,11 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <h2 className="text-3xl font-semibold mb-8">Newsletter</h2>
 
             <div>
@@ -117,7 +131,14 @@ const Footer = () => {
         </div>
 
         <div>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-500 font-normal text-center mt-10 pt-10">&copy; 2023 Saku Estates by CodeWithSaidul</p>
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-500 font-normal text-center mt-10 pt-10"
+          >
+            &copy; 2023 Saku Estates by CodeWithSaidul
+          </p>
         </div>
       </footer>
     </div>

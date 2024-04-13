@@ -1,18 +1,27 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import User1 from '../assets/user1.jpg';
-import User2 from '../assets/user2.jpg';
-import User3 from '../assets/user3.jpg';
-import User4 from '../assets/user4.jpg';
-import User5  from '../assets/user5.jpg';
-import User6 from '../assets/user6.jpg';
+import User1 from "../assets/user1.jpg";
+import User2 from "../assets/user2.jpg";
+import User3 from "../assets/user3.jpg";
+import User4 from "../assets/user4.jpg";
+import User5 from "../assets/user5.jpg";
+import User6 from "../assets/user6.jpg";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Testimonial = () => {
   return (
     <div>
       <div className="mb-10">
-        <h2 className="text-3xl font-bold text-[#1D5D9B] text-center">
+        <h2
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          className="text-3xl font-bold text-[#1D5D9B] text-center"
+        >
           What Client Says
         </h2>
       </div>
@@ -48,7 +57,12 @@ const Testimonial = () => {
           className="mySwiper"
         >
           {/* Slider Item 1 */}
-          <SwiperSlide className="rounded-xl p-5">
+          <SwiperSlide
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+            className="rounded-xl p-5"
+          >
             <div className="shadow-custom rounded-3xl p-5 md:p-16">
               <div className="relative">
                 <FaQuoteLeft size={50} className=" text-gray-300" />
@@ -83,7 +97,12 @@ const Testimonial = () => {
           </SwiperSlide>
 
           {/* Slider Item 2 */}
-          <SwiperSlide className="rounded-xl p-5">
+          <SwiperSlide
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+            className="rounded-xl p-5"
+          >
             <div className="shadow-custom rounded-3xl p-5 md:p-16">
               <div className="relative">
                 <FaQuoteLeft size={50} className=" text-gray-300" />
@@ -117,7 +136,12 @@ const Testimonial = () => {
           </SwiperSlide>
 
           {/* Slider Item 3 */}
-          <SwiperSlide className="rounded-xl p-5">
+          <SwiperSlide
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+            className="rounded-xl p-5"
+          >
             <div className="shadow-custom rounded-3xl p-5 md:p-16">
               <div className="relative">
                 <FaQuoteLeft size={50} className=" text-gray-300" />
@@ -151,7 +175,12 @@ const Testimonial = () => {
           </SwiperSlide>
 
           {/* Slider Item 4 */}
-          <SwiperSlide className="rounded-xl p-5">
+          <SwiperSlide
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+            className="rounded-xl p-5"
+          >
             <div className="shadow-custom rounded-3xl p-5 md:p-16">
               <div className="relative">
                 <FaQuoteLeft size={50} className=" text-gray-300" />
@@ -184,7 +213,12 @@ const Testimonial = () => {
           </SwiperSlide>
 
           {/* Slider Item 5 */}
-          <SwiperSlide className="rounded-xl p-5">
+          <SwiperSlide
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+            className="rounded-xl p-5"
+          >
             <div className="shadow-custom rounded-3xl p-5 md:p-16">
               <div className="relative">
                 <FaQuoteLeft size={50} className=" text-gray-300" />
@@ -218,7 +252,12 @@ const Testimonial = () => {
           </SwiperSlide>
 
           {/* Slider Item 6  */}
-          <SwiperSlide className="rounded-xl p-5">
+          <SwiperSlide
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+            className="rounded-xl p-5"
+          >
             <div className="shadow-custom rounded-3xl p-5 md:p-16">
               <div className="relative">
                 <FaQuoteLeft size={50} className=" text-gray-300" />

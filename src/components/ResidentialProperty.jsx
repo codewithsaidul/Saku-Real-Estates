@@ -2,6 +2,10 @@
 import PropTypes from 'prop-types'
 import { FaBath, FaBed } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const ResidentialProperty = ({residential}) => {
     const {
@@ -16,7 +20,12 @@ const ResidentialProperty = ({residential}) => {
       bathrooms,
     } = residential;
   return (
-    <div className="py-5 relative rounded-xl px-4 border border-[#1D5D9B] hover:border-transparent hover:shadow-custom duration-500 hover:duration-500">
+    <div
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-easing="ease-in-out"
+      className="py-5 relative rounded-xl px-4 border border-[#1D5D9B] hover:border-transparent hover:shadow-custom duration-500 hover:duration-500"
+    >
       <figure>
         <img className="rounded-lg" src={image_url} alt="" />
       </figure>

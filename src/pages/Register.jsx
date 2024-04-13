@@ -10,6 +10,11 @@ import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash, FaImage, FaUser } from "react-icons/fa";
 import { CiLock, CiMail, CiUnlock } from "react-icons/ci";
 import { Helmet } from "react-helmet-async";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
+
 
 const Register = () => {
 
@@ -63,7 +68,12 @@ const Register = () => {
         className="w-full mt-5 flex justify-center items-center"
         style={{ backgroundImage: `url(${BG})` }}
       >
-        <div className="shadow-custom my-10 rounded-xl w-full md:w-[50%]">
+        <div
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          className="shadow-custom my-10 rounded-xl w-full md:w-[50%]"
+        >
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="py-10 px-16 md:p-20 md:py-10 mb-10 "
