@@ -1,6 +1,6 @@
 # Saku Estates
 
-- [ Saku Estates ](https://react-book-vibes.netlify.app/)
+- [ Saku Estates ](https://saku-estates.web.app/)
 
 ![website image](./src/assets/web.png)
 
