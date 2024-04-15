@@ -21,13 +21,11 @@ const UpdateProfile = () => {
 
   const naviGate = useNavigate();
 
-  const onSubmit = (data) => {
-    const { Name, Photo, Email } = data;
+  const onSubmit = data => {
+    const { Name, Photo,  } = data;
 
     updateProfile(auth.currentUser, {
       displayName: Name,
-      photoURL: Photo,
-      email: Email,
     })
       .then(() => {
         if (user) {
@@ -35,7 +33,6 @@ const UpdateProfile = () => {
             ...user,
             displayName: Name,
             photoURL: Photo,
-            email: Email,
           });
         }
         toast.success("Profile Updated Successfully");
@@ -149,31 +146,6 @@ const UpdateProfile = () => {
                 )}
               </div>
 
-              <div className="flex flex-col gap-2 mt-5 mb-3">
-                <label
-                  data-aos="fade-right"
-                  data-aos-duration="1200"
-                  data-aos-easing="ease-in-out"
-                  className="text-xl font-semibold text-gray-300"
-                >
-                  E-Mail
-                </label>
-
-                <div
-                  data-aos="fade-left"
-                  data-aos-duration="1200"
-                  data-aos-easing="ease-in-out"
-                  className="w-full shadow-custom rounded-full flex items-center py-2 px-3"
-                >
-                  <input
-                    type="email"
-                    placeholder={user?.email ? user.email : "Type Your Email"}
-                    {...register("Email")}
-                    defaultValue={user.email}
-                    className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
-                  />
-                </div>
-              </div>
 
               <button
                 data-aos="fade-up"

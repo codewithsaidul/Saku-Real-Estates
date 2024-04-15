@@ -51,7 +51,7 @@ const Register = () => {
         displayName: Name,
         photoURL: Photo,
       })
-      setUser({ ...user, isplayName: Name, photoURL: Photo, });
+      setUser({ ...user, displayName: Name, photoURL: Photo, });
       toast.success("Successfully Created Account!");
       naviGate("/login");
       loggedOutUser();

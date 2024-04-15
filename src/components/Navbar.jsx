@@ -122,9 +122,9 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end">
-          
           <div>
-            {user ? <div className="dropdown dropdown-end ml-5">
+            {user ? (
+              <div className="dropdown dropdown-end ml-5">
                 <div
                   tabIndex={0}
                   role="button"
@@ -134,7 +134,7 @@ const Navbar = () => {
                   <div className="w-10 rounded-full">
                     <img
                       alt="Tailwind CSS Navbar component"
-                      src={user.photoURL ? user.photoURL : <FaUser size={24}/> }
+                      src={user.photoURL }
                     />
                   </div>
                 </div>
@@ -152,10 +152,19 @@ const Navbar = () => {
                   </li>
                 </ul>
               </div>
-              : <FaUser size={24}/>}
+            ) : (
+              <div className="flex items-center gap-2">
+                <FaUser size={24} />
+                <Link to="/login">
+                  <button className="py-2 px-7 border border-[#1D5D9B] text-black font-medium ml-5 hover:bg-[#1D5D9B] hover:text-white duration-700 rounded-3xl">
+                    Login
+                  </button>
+                </Link>
+              </div>
+            )}
           </div>
 
-          {user ? (
+          {/* {user ? (
             <button
               onClick={handleLoggedOut}
               className="py-2 px-3 md:px-7 border border-[#1D5D9B] text-black font-medium ml-5 hover:bg-[#1D5D9B] hover:text-white duration-700 rounded-3xl"
@@ -168,7 +177,7 @@ const Navbar = () => {
                 Login
               </button>
             </Link>
-          )}
+          )} */}
         </div>
       </div>
     </div>
