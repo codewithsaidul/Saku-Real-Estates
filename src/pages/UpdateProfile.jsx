@@ -21,8 +21,8 @@ const UpdateProfile = () => {
 
   const naviGate = useNavigate();
 
-  const onSubmit = data => {
-    const { Name, Photo,  } = data;
+  const onSubmit = (data) => {
+    const { Name, Photo } = data;
 
     updateProfile(auth.currentUser, {
       displayName: Name,
@@ -108,6 +108,8 @@ const UpdateProfile = () => {
                 )}
               </div>
 
+
+
               <div className="flex flex-col gap-2 mt-5 mb-3">
                 <label
                   data-aos="fade-right"
@@ -146,6 +148,36 @@ const UpdateProfile = () => {
                 )}
               </div>
 
+              <div className="flex flex-col gap-2 mt-5 mb-3">
+                <label
+                  data-aos="fade-left"
+                  data-aos-duration="1200"
+                  data-aos-easing="ease-in-out"
+                  className="text-xl font-semibold text-gray-300"
+                >
+                  Email
+                </label>
+
+                <div
+                  data-aos="fade-right"
+                  data-aos-duration="1200"
+                  data-aos-easing="ease-in-out"
+                  className="w-full shadow-custom rounded-full flex items-center py-2 px-3"
+                >
+                  <input
+                    type="text"
+                    placeholder={user.email}
+                    value={user.email}
+                    disabled
+                    className="w-full outline-none border-0 bg-transparent  pl-4 text-gray-200 "
+                  />
+                </div>
+                {errors.Photo && (
+                  <p className="text-base text-red-600 font-semibold">
+                    {errors.Photo.message}
+                  </p>
+                )}
+              </div>
 
               <button
                 data-aos="fade-up"
